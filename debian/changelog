@@ -1,0 +1,5 @@
+universal-ctags (0.8-1) stable; urgency=medium
+
+  * Initial release. (Closes: #797359)
+
+ -- Antoine R. Dumont (@ardumont) <antoine.romain.dumont@gmail.com>  Fri, 21 Oct 2016 15:01:22 +0200

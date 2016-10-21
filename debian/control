@@ -1,0 +1,27 @@
+Source: universal-ctags
+Section: editors
+Priority: optional
+Maintainer: Masatake YAMATO <masatake@gmail.com>
+Build-Depends: dpkg (>= 1.17.27~),
+               debhelper (>= 9),
+               autoconf,
+               automake,
+               autotools-dev,
+               libjansson-dev,
+               libyaml-dev
+Standards-Version: 3.9.8
+Homepage: https://ctags.io/
+
+Package: universal-ctags
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: ctags
+Suggests: vim | nvi | vile | emacsen
+Multi-Arch: foreign
+Description: Generates an index (or tag) file of names found in source files
+ A continuation of the exuberant-ctags implementation of the ctags
+ program. Ctags generates an index (or tag) file of language objects
+ found in source files that allows these items to be quickly and
+ easily located by a text editor or other utility. A tag signifies a
+ language object for which an index entry is available (or,
+ alternatively, the index entry created for that object).
