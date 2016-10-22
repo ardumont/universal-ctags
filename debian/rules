@@ -1,15 +1,11 @@
 #! /usr/bin/make -f
 %:
-	dh $@ --parallel
+	dh $@
 
-export DH_VERBOSE=1
-
-# export DEB_BUILD_MAINT_OPTIONS := hardening=+all
-# export DEB_CFLAGS_MAINT_APPEND := -Wall
+override_dh_autoreconf:
+	dh_autoreconf ./autogen.sh
 
 override_dh_auto_configure:
-	NOCONFIGURE=1 ./autogen.sh
-	# dh_auto_configure -- CFLAGS="$(CPPFLAGS) $(CFLAGS)" --enable-iconv
 	dh_auto_configure -- --enable-iconv
 
 override_dh_auto_install:
