@@ -11,17 +11,20 @@ Build-Depends: autoconf,
                libyaml-dev
 Standards-Version: 3.9.8
 Homepage: https://ctags.io/
+#Vcs-Git: git://anonscm.debian.org/collab-maint/universal-ctags.git
 
 Package: universal-ctags
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Provides: ctags
-Suggests: vim | nvi | vile | emacsen
+Suggests: vim | nvi | elvis | vile | emacsen
 Multi-Arch: foreign
-Description: Generates an index (or tag) file of names found in source files
+Description: Generates a tag file index of source code definitions
  A continuation of the exuberant-ctags implementation of the ctags
  program. Ctags generates an index (or tag) file of language objects
  found in source files that allows these items to be quickly and
- easily located by a text editor or other utility. A tag signifies a
- language object for which an index entry is available (or,
- alternatively, the index entry created for that object).
+ easily located by a text editor or other utility.
+ .
+ A tag signifies a language object (function name, variables, etc)
+ for which an index entry is available (or, alternatively, the index
+ entry created for that object).
