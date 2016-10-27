@@ -1,0 +1,19 @@
+# Things to do after upstream has a first release:
+
+ * Add 'debian/watch' file after upstream releases first version.
+
+ * Use the 'make' target for tarballs provided by upstream (issue 183).
+
+ * Upstream is missing changelog.
+
+ * 'man universal-ctags' (from 'ctags.1.in') informs about
+   'etc/ctags.conf' but that doesn't exist yet.
+
+ * see if 'etc/ctags/*' dirs are being used, and not remove them if so.
+
+# Things that should be fixed:
+
+ * '/usr/share/ctags' should be '/usr/share/universal-ctags'.
+
+ * '/usr/lib/x64_64-linux-gnu/ctags' should be
+   '/usr/lib/universal-ctags'

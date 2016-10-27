@@ -1,0 +1,14 @@
+Document: universal-ctags-hacking-guide
+Title: universal-ctags hacking guide 
+Author: universal-ctags developers
+Abstract: universal-ctags generates a tag file
+ indexes of source code definitions. This guide is for
+ developers of universal-ctags.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/universal-ctags/universal-ctags.html
+Files: /usr/share/doc/universal-ctags/universal-ctags.html
+
+Format: PDF
+Files: /usr/share/doc/universal-ctags/universal-ctags.pdf.gz
