@@ -11,7 +11,12 @@ Build-Depends: autoconf,
                libyaml-dev,
                libxml2-dev,
                libyaml-dev,
-               inkscape
+               python-sphinx,
+               inkscape,
+               texlive-latex-base,
+               texlive-latex-recommended,
+               texlive-fonts-recommended,
+               texlive-latex-extra
 Standards-Version: 3.9.8
 Homepage: https://ctags.io/
 #Vcs-Git: git://anonscm.debian.org/collab-maint/universal-ctags.git
