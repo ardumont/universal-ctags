@@ -9,7 +9,7 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 dtmp = debian/universal-ctags
 
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_autoreconf:
 	dh_autoreconf ./autogen.sh
@@ -28,6 +28,3 @@ override_dh_installdocs:
 	$(MAKE) --directory=docs latexpdf
 	mv docs/_build/latex/UniversalCtags.pdf docs/universal-ctags.pdf
 	dh_installdocs
-
-override_dh_install:
-	dh_install
