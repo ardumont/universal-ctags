@@ -1,0 +1,12 @@
+Index: universal-ctags/main/options.c
+===================================================================
+--- universal-ctags.orig/main/options.c
++++ universal-ctags/main/options.c
+@@ -1381,7 +1381,6 @@ static void printProgramIdentification (
+ 	printf ("Universal Ctags is derived from Exuberant Ctags.\n");
+ 	printf ("Exuberant Ctags 5.8, Copyright (C) 1996-2009 Darren Hiebert\n");
+ 
+-	printf ("  Compiled: %s, %s\n", __DATE__, __TIME__);
+ 	printf ("  URL: %s\n", PROGRAM_URL);
+ 
+ 	printFeatureList ();
