@@ -10,7 +10,8 @@ Build-Depends: autoconf,
                libjansson-dev,
                libyaml-dev,
                libxml2-dev,
-               libyaml-dev
+               libyaml-dev,
+               inkscape
 Standards-Version: 3.9.8
 Homepage: https://ctags.io/
 #Vcs-Git: git://anonscm.debian.org/collab-maint/universal-ctags.git

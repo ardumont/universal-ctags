@@ -25,7 +25,8 @@ override_dh_auto_configure:
 
 override_dh_installdocs:
 	$(MAKE) --directory=docs html
-	$(MAKE) --directory=docs pdf
+	$(MAKE) --directory=docs latexpdf
+	mv docs/_build/latex/UniversalCtags.pdf docs/universal-ctags.pdf
 	dh_installdocs
 
 override_dh_install:

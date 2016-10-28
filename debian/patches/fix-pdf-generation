@@ -1,0 +1,25 @@
+Index: universal-ctags/docs/Makefile
+===================================================================
+--- universal-ctags.orig/docs/Makefile
++++ universal-ctags/docs/Makefile
+@@ -103,6 +103,11 @@ epub:
+ 	@echo
+ 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
+ 
++prepare-latex:
++	sed -i 's/.svg/.pdf/g' internal.rst
++	inkscape --export-area-drawing --export-pdf input-text-stream.pdf input-text-stream.svg
++	inkscape --export-area-drawing --export-pdf output-tag-stream.pdf output-tag-stream.svg
++
+ latex:
+ 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+ 	@echo
+@@ -110,7 +115,7 @@ latex:
+ 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
+ 	      "(use \`make latexpdf' here to do that automatically)."
+ 
+-latexpdf:
++latexpdf: prepare-latex
+ 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+ 	@echo "Running LaTeX files through pdflatex..."
+ 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
