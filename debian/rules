@@ -6,8 +6,6 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
-dtmp = debian/universal-ctags
-
 %:
 	dh $@ --parallel
 
@@ -16,11 +14,7 @@ override_dh_autoreconf:
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-		--program-transform-name='s/ctags/ctags-universal/; s/etags/etags-universal/'\
-		# --with-ctags-datadir=/etc/ctags/
-		# --with-ctags-libexecdir=/usr/lib/
-		--enable-readlib \
-		--enable-etags \
+	        --program-transform-name='s/ctags/universal-ctags/' \
                 --enable-iconv
 
 override_dh_installdocs:

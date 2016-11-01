@@ -3,9 +3,7 @@
 set -e
 
 if [ "$1" = "remove" ] ; then
-	for i in ctags etags ; do
-		update-alternatives --remove $i /usr/bin/ctags-universal
-	done
+    update-alternatives --remove ctags /usr/bin/universal-ctags
 fi
 
 #DEBHELPER#
