@@ -17,8 +17,13 @@ override_dh_auto_configure:
 	        --program-transform-name='s/ctags/universal-ctags/' \
                 --enable-iconv
 
-override_dh_installdocs:
+override_dh_installdocs: doc_html doc_pdf
+	dh_installdocs
+
+doc_html:
 	$(MAKE) --directory=docs html
+	cd docs/_build/html && tar acf universal-ctags.html.tar.gz * && mv universal-ctags.html.tar.gz ../..
+
+doc_pdf:
 	$(MAKE) --directory=docs latexpdf
 	mv docs/_build/latex/UniversalCtags.pdf docs/universal-ctags.pdf
-	dh_installdocs
