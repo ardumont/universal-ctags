@@ -1,7 +1,7 @@
 Source: universal-ctags
 Section: editors
 Priority: optional
-Maintainer: Masatake YAMATO <masatake@gmail.com>
+Maintainer: Antoine R. Dumont (@ardumont) <antoine.romain.dumont@gmail.com>
 Build-Depends: autoconf,
                automake,
                autotools-dev,
