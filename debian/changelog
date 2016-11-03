@@ -1,3 +1,9 @@
+universal-ctags (0.8-1~bpo8~swh+1) jessie-backports-swh; urgency=medium
+
+  * Rebuild for jessie-backports-swh
+
+ -- Antoine R. Dumont (@ardumont) <antoine.romain.dumont@gmail.com>  Thu, 03 Nov 2016 10:16:53 +0100
+
 universal-ctags (0.8-1) stable; urgency=medium
 
   * Initial release. (Closes: #797359)
