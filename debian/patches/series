@@ -1,4 +1,3 @@
-fix-pdf-generation
 fix-autogen
 reproducible
 remove-git-dependency-on-build
